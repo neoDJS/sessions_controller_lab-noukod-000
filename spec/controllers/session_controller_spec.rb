@@ -35,7 +35,7 @@ RSpec.describe SessionsController, type: :controller do
     end
 
     it 'clears session[:name] if it was set' do
-      post :create, name: 'Trinity'
+      post :create, params: {name: 'Trinity'}
       expect(@request.session[:name]).not_to be nil
       post :destroy
       expect(@request.session[:name]).to be nil
