@@ -3,6 +3,8 @@ class SessionsController < ApplicationController
   end
 
   def create
+
+    render :hello
   end
 
   def destroy
