@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def create
     session[:username] = params[:name]
 
-    render :hello
+    redirect_to root_path :hello
   end
 
   def destroy
